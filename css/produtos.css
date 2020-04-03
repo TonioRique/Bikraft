@@ -106,7 +106,7 @@ padding-top: 16px;
     background: none;
     color: white;
     padding: 5px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     outline: none;
     font-size: 14px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -117,4 +117,29 @@ padding-top: 16px;
 }
 .orcamento_dados{
     color:white;
+}
+.orcamento_dados h3{
+    font-size: 18px;
+    color: #fec63e;
+    line-height: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.orcamento_dados span{
+    display: block;
+    font-size: 18px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 30px;
+}
+.dados_emai{
+    margin-bottom: 40px;
+}
+
+.orcamento_dados ul li{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.orcamento_dados ul li:nth-child(odd){
+    background-color: #1d1d1d;
 }

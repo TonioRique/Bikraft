@@ -338,7 +338,7 @@ img {
 .footer h3:after{
 	content:"";
 	display: block;
-	width: 60px;
+	width: 100px;
 	height: 3px;
 	background-color: #fec63e;
 	margin: 6px 0 12px 0;
