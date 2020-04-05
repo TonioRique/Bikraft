@@ -134,12 +134,18 @@ padding-top: 16px;
 .dados_emai{
     margin-bottom: 40px;
 }
-
+.orcamento_dados ul{
+    padding-right: 60px;
+}
 .orcamento_dados ul li{
     font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 20px 10px;
     font-size: 14px;
 }
 
 .orcamento_dados ul li:nth-child(odd){
     background-color: #1d1d1d;
+}
+.orcamento_dados p{
+    margin: 8px;
 }
