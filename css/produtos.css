@@ -44,16 +44,16 @@
     padding: 30px 40px;
 }
 .produto_info ul li{
-background: #fec63e;
-text-transform: uppercase;
-font-size: 18px;
-font-weight: bold;
-line-height: 20px;
-float:left;
-width: 229px;
-height: 49px;
-text-align: center;
-padding-top: 16px;
+    background: #fec63e;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    float:left;
+    width: 229px;
+    height: 49px;
+    text-align: center;
+    padding-top: 16px;
 }
 
 .produto_info ul li:nth-child(1),.produto_info ul li:nth-child(2){
