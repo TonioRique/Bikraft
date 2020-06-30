@@ -77,9 +77,6 @@ img {
 
 /* Header */
 
-.menu-ativo{
-	color: #fff !important;
-}
 .header {
 	position: fixed;
 	top: 0;
@@ -112,34 +109,18 @@ img {
 .header_menu ul li a:hover {
 	color: #FFF;
 }
-/*Introdução Interna*/
-.introducao_interna{
-	width: 100%;
-	margin-top: 92px;
-	height:160px ;
-	background-size: cover;
-	text-align: center;
-	color:#fff;
-	padding-top: 30px;
+
+.header_menu ul li a.menu_ativo {
+	color: #FFF;
 }
-.introducao_interna h1 {
-	font-size: 36px;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-.introducao_interna h1:after{
-	content: "";
-	display: block;
-	width: 60px;
-	height: 3px;
-	background: #fff;
-	margin: 6px auto 10px auto;
-}
+
 /* Introdução */
+
 .introducao {
 	width: 100%;
 	height: 380px;
 	background: url("../img/bg.jpg") no-repeat center;
+	background-size: cover;
 	margin-top: 92px;
 	text-align: center;
 	padding-top: 80px;
@@ -151,7 +132,6 @@ img {
 	font-weight: bold;
 	text-transform: uppercase;
 }
-
 
 .quote-externo {
 	max-width: 320px;
@@ -180,6 +160,33 @@ img {
 	letter-spacing: .1em;
 }
 
+/*Introducao Interna*/
+
+.introducao-interna {
+	width: 100%;
+	margin-top: 92px;
+	height: 160px;
+	text-align: center;
+	color: #fff;
+	padding-top: 30px;
+}
+
+.introducao-interna h1 {
+	font-size: 36px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.introducao-interna h1:after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: #fff;
+	margin: 6px auto 10px auto;
+}
+
+
 /*Produtos*/
 
 .produtos {
@@ -191,7 +198,6 @@ img {
 	text-align: center;
 }
 
-/* Necessário para centralizar as imagens */
 .produtos_lista li img {
 	margin: 0 auto;
 }
@@ -281,7 +287,7 @@ img {
 
 .qualidade_lista {
 	padding-top: 20px;
-	overflow: auto;
+	overflow: auto; /* clear-fix */
 }
 
 .qualidade_lista li {
@@ -306,28 +312,32 @@ img {
 	background: #000;
 	margin: 6px auto;
 }
-/*quebra*/
-.quebra{
+
+/*Quebra*/
+
+.quebra {
 	width: 100%;
 	height: 220px;
-	background: url('../img/bg-footer.jpg') no-repeat center;
-	background-size: cover; 
+	background: url("../img/bg-footer.jpg") no-repeat center;
+	background-size: cover;
 	text-align: center;
 	padding-top: 40px;
 }
 
-.quebra .quote-externo{
+.quebra .quote-externo {
 	max-width: 400px;
 }
+
 /*Footer*/
-.footer{
+
+.footer {
 	width: 100%;
-	background-color: #000;
+	background: #000;
 	color: #fff;
 	padding: 20px 0;
 }
 
-.footer h3{
+.footer h3 {
 	font-size: 18px;
 	line-height: 25px;
 	color: #fec63e;
@@ -336,39 +346,97 @@ img {
 	font-weight: bold;
 }
 
-.footer h3:after{
-	content:"";
+.footer h3:after {
+	content: "";
 	display: block;
-	width: 100px;
+	width: 60px;
 	height: 3px;
-	background-color: #fec63e;
+	background: #fec63e;
 	margin: 6px 0 12px 0;
 }
-.footer_historia{
+
+.footer_historia {
 	padding-right: 40px;
 }
 
-.footer_contato ul li{
+.footer_contato ul li {
 	font-size: 14px;
 	line-height: 20px;
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: Georgia, "Times New Roman", serif;
 }
 
-.footer_redes ul li{
+.footer_redes ul li {
 	display: inline-block;
 	margin-right: 10px;
 }
 
-.footer_redes ul li a{
+.footer_redes ul li a {
 	border: 3px solid #fec63e;
 	display: block;
 	padding: 10px;
 }
-.footer_redes ul li a:hover{
-	border-color: #FFF;
+
+.footer_redes ul li a:hover {
+	border-color: #fff;
 }
-.copy{
+
+.copy {
 	width: 100%;
-	background-color: #fec63e;
+	background: #fec63e;
 	padding: 20px 0;
+}
+
+/* JavaScript */
+
+.js [data-slide] {
+  position: relative;
+}
+
+.js [data-slide] > * {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+
+.js [data-slide] > .active {
+  position: relative;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.js [data-slide-nav] {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.js [data-slide-nav] button {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 4px;
+	border: none;
+	padding: 0px;
+	border-radius: 6px;
+	text-indent: -99px;
+	overflow: hidden;
+	background: #1d1d1d;
+}
+
+.js [data-slide-nav] button.active {
+	background: #fec63e;
+}
+
+.js [data-anime] {
+	opacity: 0;
+}
+
+.js .fadeInDown {
+	transform: translate3d(0, -20px, 0);
+}
+
+.js .anime {
+	opacity: 1;
+	transform: none;
+	transition: opacity 800ms, transform 800ms;
 }
